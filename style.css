@@ -1,0 +1,522 @@
+:root{
+    --black:black;
+    --bright-red:#a71515;
+    --green:#0a4718;
+    --orange:rgb(235, 161, 23);
+    --white:#fff;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  html{
+    scroll-behavior:smooth;
+  }
+  body{
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .w-full{
+    width: calc(100vw, -10rem);
+    max-width: 1440px;
+    margin: auto;
+  }
+  /*----------NAVBAR-----------*/
+    
+
+.ruchii-navbar {
+    background: transparent;
+    transition: background-color 0.35s ease,
+                box-shadow 0.35s ease;
+    
+}
+
+
+.ruchii-navbar .navbar-brand {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--bright-red);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+
+/* -----Desktop------- */
+
+.ruchii-navbar .nav-link {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: var(--bright-red);
+    transition: color 0.3s ease;
+    justify-content: space-between;
+}
+
+
+/* Hover */
+.ruchii-navbar .nav-link:hover {
+    color: var(--orange);
+}
+.ruchii-navbar .navbar-brand:hover{
+    color: var(--orange);
+}
+
+/* Active link */
+.ruchii-navbar .nav-link.active {
+    color: var(--bright-red);
+}
+.ruchii-navbar .nav-link.active:hover {
+    color: var(--orange);
+}
+
+/*-----------Scrolled navbar---------*/
+
+.ruchii-navbar.scrolled {
+    background: var(--bright-red);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Brand after scrolling */
+.ruchii-navbar.scrolled .navbar-brand {
+    color: var(--white);
+}
+.ruchii-navbar.scrolled .navbar-brand:hover {
+    color: var(--orange);
+}
+
+/* Links after scrolling */
+.ruchii-navbar.scrolled .nav-link,
+.ruchii-navbar.scrolled .nav-link.active {
+    color: var(--white);
+}
+
+
+/* Hover after scrolling */
+.ruchii-navbar.scrolled .nav-link:hover {
+    color: var(--orange);
+}
+
+
+/*---------HAMBURGER BUTTON----------- */
+
+.ruchii-navbar .navbar-toggler {
+    border: 2px solid var(--bright-red);
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+.ruchii-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler{
+    border: 2px solid var(--bright-red);
+    padding: 6px 6px;
+    border-radius: 3px;
+}
+
+/* Hamburger icon */
+.ruchii-navbar .navbar-toggler-icon {
+    background-image: none;
+    width: 1em;
+    height: 1em;
+    position: relative;
+}
+
+
+/* Create hamburger with Bootstrap Icons */
+.ruchii-navbar .navbar-toggler-icon::before {
+    content: "\F479";
+    font-family: "bootstrap-icons";
+    font-size: 1.5rem;
+    color: var(--bright-red);
+
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+
+/*----------SCROLLED HAMBURGER---------- */
+
+.ruchii-navbar.scrolled .navbar-toggler {
+    background: var(--bright-red);
+    border-color: var(--bright-red);
+}
+
+.ruchii-navbar.scrolled .navbar-toggler-icon::before {
+    color: var(--ink);
+}
+
+
+/*----------CART BUTTON -----------*/
+
+.cart-btn {
+    color: var(--white);
+    padding: 8px 20px;
+    font-weight: 500;
+    background: var(--bright-red);
+    border: 1px solid var(--bright-red);
+    font-family: "Rubik", sans-serif;
+}
+
+.cart-btn:hover {
+    color: var(--white);
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.bi-cart {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+/*----------SCROLLED cart---------- */
+.ruchii-navbar.scrolled .cart-btn {
+    color: var(--bright-red);
+    padding: 8px 20px;
+    font-weight: 500;
+    background: var(--white);
+    border-color: var(--white);
+    font-family: "Rubik", sans-serif;
+}
+
+.ruchii-navbar.scrolled .cart-btn:hover {
+    color: var(--white);
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.ruchii-navbar.scrolled .bi-cart {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+/*--------MOBILE NAVIGATION--------- */
+
+@media (max-width: 991.98px) {
+
+    /*
+       When the Bootstrap collapse opens,
+       give the menu the red background.
+    */
+    .ruchii-navbar .navbar-collapse {
+        background: var(--bright-red);
+        padding: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+
+    /* Mobile links */
+    .ruchii-navbar .navbar-collapse .nav-link {
+        color: var(--white);
+    }
+
+
+    /* Active mobile link */
+    .ruchii-navbar .navbar-collapse .nav-link.active {
+        color: var(--white);
+    }
+
+
+    /* Hover mobile link */
+    .ruchii-navbar .navbar-collapse .nav-link:hover {
+        color: var(--white);
+    }
+
+
+    /* Mobile cart */
+    .ruchii-navbar .navbar-collapse .cart-btn {
+        margin-top: 10px;
+    }
+
+}
+ 
+/*----------section1-home----------*/
+#main{
+    overflow:hidden;
+}
+#pome{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top: 2.2em;
+    max-width: 500px;
+    filter: drop-shadow(0 0 0.75rem var(--black));
+    will-change: transform;
+    z-index:9;
+}
+#home{
+    height:100vh;
+    width:60vw;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+}
+#home h1{
+    font-size: 10vw;
+    line-height: 0.85;
+    margin-bottom: 0;
+   
+}
+/*------for all heading in the website---------*/
+.heading{
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    line-height: 0.95;
+    margin-bottom: 1.4rem;
+    color: var(--bright-red);
+    text-transform: uppercase;
+}
+/*--------- section1-about--------*/
+#about{
+    min-height:100vh;
+    padding-top: 4vw;
+}
+.btn-radius {
+    color: var(--white);
+    padding: 8px 20px;
+    font-weight: 500;
+    background: var(--bright-red);
+    border: 1px solid var(--bright-red);
+    font-family: "Rubik", sans-serif;
+}
+#about .h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+
+}
+.btn-radius:hover {
+    color: var(--white);
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 8vw;
+}
+.about-box{
+    align-items: center;
+    justify-content: center;
+    background: var(--orange);
+    border-radius: 10px;
+    border: 1px solid var(--orange);
+    color: var(--white);
+    padding: 1.5rem;
+}
+.about-icon{
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.about-name{
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+/*----------- section2-process------*/
+#process{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:5vw;
+}
+
+#process .h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    
+}
+#process .content-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5vw;
+}
+#process .process-video{
+    flex:0 1 500px;
+}
+#process .process-video video{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    display:block;
+    box-shadow:0 0 30px var(--black);
+}
+#section3 .content{
+    flex:0 1 500px;
+}
+
+#section3 p{
+    margin-bottom:1rem;
+}
+
+/*------seection 4-shop---*/
+#shop{
+    text-align: center;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+    min-height: 94vh;
+}
+#shop .product-section{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+}
+#shop img{
+    width:100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(6px, 15px, 5px var(--black));
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.product .name{
+    font-size: 24px;
+    font-weight: 500;
+}
+.product .price{
+    font-size: 24px;
+    font-weight: 700;
+}
+/*-----section 6-blog----*/
+#blog{
+     min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5vw;
+    padding:5vw;
+}
+#blog .blog-img{
+    flex:0 1 500px;
+}
+#blog .blog-img img{
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 0 30px var(--black);
+}
+#blog .content-wrapper{
+    flex:0 1 500px;
+}
+
+#blog p{
+    margin-bottom:1rem;
+}
+ /* ===== FOOTER ===== */
+footer{
+  background:var(--bright-red);
+  border-top:1px solid rgba(242,233,220,0.12);
+  padding:4.5rem 0 2rem;
+}
+footer, footer p, footer .footer-bottom{
+  color:var(--white);
+}
+footer h6, footer h5, footer .navbar-brand{
+  color:var(--white);
+}
+footer .navbar-brand{
+  color: var(--white);
+}
+footer h6{
+  font-family:'JetBrains Mono', monospace; 
+  font-size:.85rem;
+  letter-spacing:.1em;
+  text-transform:uppercase; 
+  color:var(--white); 
+  margin-bottom:1.2rem;
+}
+footer ul{
+  list-style:none; 
+  padding:0; 
+  margin:0;
+}
+footer ul li{
+  list-style: none;
+  margin-bottom:.65rem;
+}
+footer ul li a{
+  text-decoration: none;
+  color:var(--white);  
+  font-size:.9rem; 
+  transition:color .2s ease;
+}
+footer ul li a:hover{
+  color:var(--orange);
+}
+.social-row{
+  display:flex; 
+  gap:.7rem; 
+  margin-top:1.3rem;
+}
+.social-row a{
+  text-decoration: none;
+  width:36px; 
+  height:36px;
+  border:1px solid rgba(242,233,220,0.18); 
+  border-radius:50%;
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  color:var(--white);
+  transition:all .2s ease;
+}
+.social-row a:hover{
+  border-color:var(--orange); 
+  color:var(--orange);
+}
+.newsletter-input-group{
+  display:flex;
+  border:1px solid rgba(242,233,220,0.18); 
+  border-radius:8px;   
+  overflow:hidden;
+}
+.newsletter-input-group input{
+  flex:1; 
+  background:rgb(231, 82, 82); 
+  border:0; 
+  padding:1.5rem 1rem; 
+  color:var(--white); 
+  font-size:.88rem;
+}
+.newsletter-input-group input::placeholder{
+  color:var(--white);
+}
+.newsletter-input-group input:focus{
+  outline:none;
+}
+.newsletter-input-group button{
+  background:rgb(48, 47, 47); 
+  border:0; 
+  color:var(--white); 
+  padding:0 1rem; 
+  font-size:.95rem;
+}
+.newsletter-input-group button:hover{
+  background:var(--orange);
+}
+.footer-bottom {
+  border-top:1px solid rgba(242,233,220,0.12);
+  margin-top:3rem; 
+  padding-top:1.6rem;
+  display:flex;
+  justify-content:space-between; 
+  flex-wrap:wrap;
+  gap:.8rem;
+  font-size:.85rem; 
+  color:#a89684; 
+  font-family:'JetBrains Mono', monospace;
+}
